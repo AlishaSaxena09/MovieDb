@@ -3,19 +3,9 @@ import movie from "../src/assets/movie.svg";
 import Modal from "./Modal";
 
 function Movie(data) {
-  const [hovered, setHovered] = useState(true);
-
   const [ModalIsOpen, setModalIsOpen] = useState(false);
 
   const [selectedMovie, setSelectedMovie] = useState({});
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
 
   const colorArray = [
     "#beadfa",
