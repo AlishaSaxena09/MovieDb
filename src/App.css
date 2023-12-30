@@ -98,7 +98,7 @@ body {
 
 .form input {
   width: 81%;
-  background-color: var(white);
+  background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border: 8px double var(--white);
   padding: 0.8rem 1.6rem;
@@ -162,7 +162,7 @@ body {
 
 .movie-title {
   font-size: 1.2rem;
-  color: white;
+  color: var(--white);
   font-family: "poppins";
   font-weight: 600;
   margin-bottom: 0;
@@ -170,7 +170,7 @@ body {
 }
 
 .movie span {
-  color: white;
+  color: var(--white);
   font-weight: 600;
   font-size: 0.8rem;
 }

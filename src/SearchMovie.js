@@ -61,13 +61,6 @@ function SearchMovie() {
           </div>
         )}
         <Movie data={movies} />
-        {/* <div>
-          <div>
-            {movies.map((ele) => {
-              return <p>{ele.original_title}</p>;
-            })}
-          </div>
-        </div> */}
       </div>
     </div>
   );

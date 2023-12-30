@@ -3,7 +3,7 @@ import React from "react";
 function Modal({ show, setShow, data }) {
   console.log("ele", data);
 
-  const generatedColor = data.generatedColor; // Assuming data.generatedColor contains the color value
+  const generatedColor = data.generatedColor;
   const dynamicStyle = {
     backgroundColor: generatedColor,
   };
