@@ -1,38 +1,473 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
+body {
+  background-color: var(--fourth-color);
+}
+
+:root {
+  --primary-color: #beadfa;
+  --secondary-color: #d0bfff;
+  --third-color: #dfccfb;
+  --fourth-color: #fff8c9;
+  --black: #000;
+  --white: #fff;
+  --pink: #e6b9de;
+  --frushia-pink: #e26ee5;
+  --purple: #7743db;
+  --head: #363062;
+}
+
+.heading {
+  color: var(--head);
+  text-align: center;
+  animation: color-animation 3s linear infinite;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.hero {
+  margin: 2rem 0;
+  background-color: var(--primary-color);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.second-hero {
+  width: 200px;
+  height: 200px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.second-hero img {
+  color: var(--white);
+  width: 70px;
+  animation: whirl 8s linear infinite;
+}
+
+.second-hero img:nth-child(2) {
+  margin-left: 6rem;
+}
+.welcome {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Rubik Doodle Shadow";
+  color: var(--white);
+  margin: 0;
+  animation: double 2s linear 1;
+}
+
+.hero span {
+  font-family: "Poppins";
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.desc {
+  font-family: "Poppins";
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.date {
+  font-family: "Poppins";
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.form {
+  width: 100%;
+}
+
+.form input {
+  width: 81%;
+  background-color: var(white);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border: 8px double var(--white);
+  padding: 0.8rem 1.6rem;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  border-radius: 1.8rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0.2rem;
+  outline: none;
+}
+
+.button {
+  width: 18.5%;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 1.3rem 0;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  border-radius: 1.8rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 500;
+  transition: background-color 1s ease-in;
+}
+
+.button:hover {
+  background-color: var(--purple);
+}
+
+.movie-case {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  /* justify-content: center; */
+  padding: 4rem 2rem;
+}
+
+.movie {
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 15rem;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.movie:hover {
+  opacity: 70%;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  color: white;
+  font-family: "poppins";
+  font-weight: 600;
+  margin-bottom: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie span {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.movie img {
+  border: 2px solid var(--black);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+.modal-movie {
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Centering trick */
+  overflow: auto;
+  z-index: 1;
+  width: 50%;
+}
+.modal-content {
+  margin: 0 auto; /* 15% from the top and centered */
+}
+.modal-content img {
+  width: 230px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.5); /* Adjust the opacity as needed */
+  /* opacity: 20%; */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes color-animation {
+  0% {
+    color: var(--primary-color);
+  }
+  20% {
+    color: var(--pink);
+  }
+  40% {
+    color: var(--third-color);
+  }
+  60% {
+    color: var(--frushia-pink);
+  }
+  80% {
+    color: var(--purple);
+  }
+  100% {
+    color: var(--head);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes double {
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 2.5rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+
+@keyframes whirl {
+  0% {
+    rotate: 90deg;
+  }
+  20% {
+    rotate: 120deg;
+  }
+  30% {
+    rotate: 180deg;
+  }
+  40% {
+    rotate: 270deg;
+  }
+  50% {
+    rotate: 320deg;
+  }
+}
+
+/*  */
+
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.snowflake {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+
+.no-svg {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.heart-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heart-clip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#svgPath);
+}
+
+.heart-clip:hover {
+  animation: pulse 0.6s 0.3s infinite;
+}
+
+.heart-clip:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.heart-clip::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(
+    --white
+  ); /* Replace $red with the actual red color value */
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.2s linear, opacity 0.2s linear;
+  transform-origin: center 60%;
+}
+
+.heart-clip.active {
+  animation: pulse 0.6s 0.3s forwards;
+}
+
+.heart-stroke {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: var(--white); /* Replace $red with the actual red color value */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+
+  30% {
+    transform: scale(1.2);
   }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+.desc-box {
+  max-height: 280px;
+  overflow: scroll;
+  padding-right: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
 }
